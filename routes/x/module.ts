@@ -37,9 +37,7 @@ export const handler: Handlers = {
       return new Response(undefined, {
         headers: {
           Location: getModulePath(name, versions.latest, path),
-          "x-deno-warning": `Implicitly using latest version (${
-            versions!.latest
-          }) for ${url.href}`,
+          "x-deno-warning": `Implicitly using latest version (${versions.latest}) for ${url.href}`,
           "Access-Control-Allow-Origin": "*",
         },
         status: 302,
@@ -47,7 +45,7 @@ export const handler: Handlers = {
     }
 
     const v = versions?.versions
-      .filter((x) => semver.satisfies(x, version!))
+      .filter((x) => semver.satisfies(x, version))
       .sort(semver.compare)[0];
 
     if (!v) {
@@ -72,7 +70,7 @@ export const handler: Handlers = {
     }
 
     const response = await fetch(
-      `https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`,
+      `https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`
     );
 
     if (isHTML) {
@@ -84,7 +82,7 @@ export const handler: Handlers = {
     }
 
     return fetch(
-      `https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`,
+      `https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`
     );
   },
 };
