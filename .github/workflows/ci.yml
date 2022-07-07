@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  check:
+  build:
     permissions:
       id-token: write
       contents: read
