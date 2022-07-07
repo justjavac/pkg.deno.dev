@@ -37,9 +37,7 @@ export const handler: Handlers = {
       return new Response(undefined, {
         headers: {
           Location: getModulePath(name, versions.latest, path),
-          "x-deno-warning": `Implicitly using latest version (${
-            versions!.latest
-          }) for ${url.href}`,
+          "x-deno-warning": `Implicitly using latest version (${versions.latest}) for ${url.href}`,
           "Access-Control-Allow-Origin": "*",
         },
         status: 302,
