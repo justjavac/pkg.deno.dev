@@ -83,6 +83,4 @@ export const handler: Handlers = {
   },
 };
 
-export const config: RouteConfig = {
-  routeOverride: "/x/:name{@:version}?/:path*",
-};
+export const config: RouteConfig = { routeOverride: "/x/:name{@:version}?/:path*" };
