@@ -8,7 +8,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Deno PKG - A version semantic and fast package delivery network for Deno.</title>
+        <title>
+          Deno PKG - A version semantic and fast package delivery network for
+          Deno.
+        </title>
       </Head>
       <div class={tw`p-4 mx-auto max-w-screen-md`}>
         <header
