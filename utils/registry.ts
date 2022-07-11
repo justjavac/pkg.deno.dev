@@ -4,7 +4,5 @@ export function getModulePath(
   version: string | undefined,
   path: string | undefined,
 ) {
-  return `${name === "std" ? "" : "/x"}/${name}${
-    version ? `@${encodeURIComponent(version)}` : ""
-  }${path}`;
+  return `${name === "std" ? "" : "/x"}/${name}${version ? `@${encodeURIComponent(version)}` : ""}${path}`;
 }
