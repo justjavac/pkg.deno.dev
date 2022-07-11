@@ -50,7 +50,7 @@ export const handler: Handlers = {
       .sort(semver.compare)[0];
 
     if (!v) {
-      return new Response(`The module '${name}@${version}' has not exist`, {
+      return new Response(`The module '${name}@${version}' does not exist`, {
         status: 404,
         headers: {
           "content-type": "text/plain",
