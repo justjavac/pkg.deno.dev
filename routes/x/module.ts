@@ -37,8 +37,7 @@ export const handler: Handlers = {
       return new Response(undefined, {
         headers: {
           Location: getModulePath(name, versions.latest, path),
-          "x-deno-warning":
-            `Implicitly using latest version (${versions.latest}) for ${url.href}`,
+          "x-deno-warning": `Implicitly using latest version (${versions.latest}) for ${url.href}`,
           "Access-Control-Allow-Origin": "*",
         },
         status: 302,
@@ -70,9 +69,7 @@ export const handler: Handlers = {
       });
     }
 
-    const response = await fetch(
-      `https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`,
-    );
+    const response = await fetch(`https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`);
 
     if (isHTML) {
       return new Response(response.body, {
@@ -82,9 +79,7 @@ export const handler: Handlers = {
       });
     }
 
-    return fetch(
-      `https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`,
-    );
+    return fetch(`https://deno.land/${name === "std" ? "" : "x/"}${name}@${v}${path}`);
   },
 };
 
