@@ -1,9 +1,9 @@
 {
   "imports": {
-    "$fresh/": "https://deno.land/x/fresh@1.0.1/",
-    "preact": "https://esm.sh/preact@10.8.2",
-    "preact/": "https://esm.sh/preact@10.8.2/",
-    "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.0?deps=preact@10.8.2",
+    "$fresh/": "https://deno.land/x/fresh@1.0.2/",
+    "preact": "https://esm.sh/preact@10.10.0",
+    "preact/": "https://esm.sh/preact@10.10.0/",
+    "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.1?deps=preact@10.10.0",
     "@utils/": "./utils/",
     "oak_commons": "https://deno.land/x/oak_commons@0.1.1/negotiation.ts",
     "semver": "https://deno.land/std/semver/mod.ts",
